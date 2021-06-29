@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+    <Title>WPFデザイン時用xmlns</Title>
+    <Description>WPFのViewデザイン時に使用する、Windowのxmlnsを追加する。</Description>
+    <Shortcut>dxmlns</Shortcut>
+  </Header>
+  <Snippet>
+    <Declarations>
+        <Literal Editable="true">
+            <ID>ViewModelNamespace</ID>
+            <ToolTip>ViewModel Namespace</ToolTip>
+            <Default>App1.ViewModels</Default>
+            <Function>
+            </Function>
+        </Literal>
+        <Literal Editable="true">
+            <ID>ViewModel</ID>
+            <ToolTip>ViewModel</ToolTip>
+            <Default>MainWindowViewModel</Default>
+            <Function>
+            </Function>
+        </Literal>
+    </Declarations>
+    <Code Language="XAML"><![CDATA[xmlns:viewModels="clr-namespace:$ViewModelNamespace$"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+mc:Ignorable="d"
+d:DataContext="{d:DesignInstance viewModels:$ViewModel$}"]]></Code>
+  </Snippet>
+</CodeSnippet>
