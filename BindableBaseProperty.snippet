@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Properties using BindableBase</Title>
+            <Description>PrismのSetPropertyを利用したプロパティを作成する。</Description>
+            <Shortcut>propbb</Shortcut>
+        </Header>
+        <Snippet>
+            <Imports>
+                <Import>
+                    <Namespace>
+                        Prism.Mvvm
+                    </Namespace>
+                </Import>
+            </Imports>
+            <Declarations>
+                <Object Editable="true">
+                    <ID>type</ID>
+                    <ToolTip>
+                    </ToolTip>
+                    <Default>object</Default>
+                    <Function>
+                    </Function>
+                    <Type>
+                    </Type>
+                </Object>
+                <Literal Editable="true">
+                    <ID>Name</ID>
+                    <ToolTip>Name</ToolTip>
+                    <Default>Name</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+                <Literal Editable="true">
+                    <ID>_name</ID>
+                    <ToolTip>_name</ToolTip>
+                    <Default>_name</Default>
+                    <Function>
+                    </Function>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp"><![CDATA[private $type$ $_name$;
+public $type$ $Name$
+{
+    get => $_name$;
+    set => SetProperty(ref $_name$, value);
+}]]></Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
